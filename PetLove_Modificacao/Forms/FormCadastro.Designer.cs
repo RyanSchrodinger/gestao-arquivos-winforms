@@ -39,19 +39,17 @@
             this.btnAtualizarCampos = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTipoTela = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTipoTela = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 129);
+            this.label2.Location = new System.Drawing.Point(15, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 4;
@@ -59,14 +57,14 @@
             // 
             // txtRaca
             // 
-            this.txtRaca.Location = new System.Drawing.Point(73, 164);
+            this.txtRaca.Location = new System.Drawing.Point(77, 151);
             this.txtRaca.Name = "txtRaca";
             this.txtRaca.Size = new System.Drawing.Size(325, 22);
             this.txtRaca.TabIndex = 5;
             // 
             // txtAnimal
             // 
-            this.txtAnimal.Location = new System.Drawing.Point(73, 126);
+            this.txtAnimal.Location = new System.Drawing.Point(77, 113);
             this.txtAnimal.Name = "txtAnimal";
             this.txtAnimal.Size = new System.Drawing.Size(325, 22);
             this.txtAnimal.TabIndex = 3;
@@ -74,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 167);
+            this.label3.Location = new System.Drawing.Point(15, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 16);
             this.label3.TabIndex = 6;
@@ -83,7 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 90);
+            this.label1.Location = new System.Drawing.Point(15, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 2;
@@ -91,14 +89,14 @@
             // 
             // txtIdade
             // 
-            this.txtIdade.Location = new System.Drawing.Point(73, 202);
+            this.txtIdade.Location = new System.Drawing.Point(77, 189);
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(325, 22);
             this.txtIdade.TabIndex = 7;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(73, 90);
+            this.txtNome.Location = new System.Drawing.Point(77, 77);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(325, 22);
             this.txtNome.TabIndex = 1;
@@ -106,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 205);
+            this.label4.Location = new System.Drawing.Point(15, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 8;
@@ -117,39 +115,50 @@
             this.btnAtualizarCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.btnAtualizarCampos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAtualizarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizarCampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizarCampos.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAtualizarCampos.Location = new System.Drawing.Point(14, 284);
+            this.btnAtualizarCampos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarCampos.ForeColor = System.Drawing.Color.Black;
+            this.btnAtualizarCampos.Location = new System.Drawing.Point(18, 271);
             this.btnAtualizarCampos.Name = "btnAtualizarCampos";
             this.btnAtualizarCampos.Size = new System.Drawing.Size(535, 42);
             this.btnAtualizarCampos.TabIndex = 9;
             this.btnAtualizarCampos.Text = "Atualizar Campos";
             this.btnAtualizarCampos.UseVisualStyleBackColor = false;
+            this.btnAtualizarCampos.Click += new System.EventHandler(this.btnAtualizarCampos_Click);
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
             this.btnCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCadastrar.Location = new System.Drawing.Point(14, 332);
+            this.btnCadastrar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
+            this.btnCadastrar.Location = new System.Drawing.Point(18, 319);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(535, 42);
             this.btnCadastrar.TabIndex = 10;
             this.btnCadastrar.Text = "Inserir Novo Animal";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lblTipoTela);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(1, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(604, 68);
             this.panel2.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PetLove_Modificacao.Properties.Resources.veterinario;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(137, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lblTipoTela
             // 
@@ -162,56 +171,39 @@
             this.lblTipoTela.TabIndex = 0;
             this.lblTipoTela.Text = "label1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PetLove_Modificacao.Properties.Resources.veterinario;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnLimpar
             // 
-            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.btnLimpar.BackColor = System.Drawing.Color.Linen;
             this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLimpar.Location = new System.Drawing.Point(430, 90);
+            this.btnLimpar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpar.Location = new System.Drawing.Point(434, 77);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(119, 39);
             this.btnLimpar.TabIndex = 12;
-            this.btnLimpar.Text = "button1";
+            this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnCadastrar);
-            this.panel1.Controls.Add(this.btnLimpar);
-            this.panel1.Controls.Add(this.btnAtualizarCampos);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtNome);
-            this.panel1.Controls.Add(this.txtIdade);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtAnimal);
-            this.panel1.Controls.Add(this.txtRaca);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(604, 385);
-            this.panel1.TabIndex = 10;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(604, 385);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnAtualizarCampos);
+            this.Controls.Add(this.txtRaca);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtAnimal);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtIdade);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCadastro";
@@ -219,9 +211,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -241,6 +232,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTipoTela;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Panel panel1;
     }
 }

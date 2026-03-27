@@ -121,15 +121,19 @@ namespace PetLove_Modificacao
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            
+            Animal animalNovo;
             string mensagem = "INSERIR NOVO ANIMAL";
             using (FormCadastro telaCadastro = new FormCadastro(mensagem))
             {
 
-
                 telaCadastro.ShowDialog();
-
+                animalNovo = telaCadastro.Animal;
             }
+
+            if (animalNovo == null) return;
+
+            lboDados.Items.Add(animalNovo);
+            lboDados.Update();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -141,11 +145,73 @@ namespace PetLove_Modificacao
                 MessageBox.Show("Selecione algum campo.");
                 return;
             }
+            Animal animalNovo;
             string mensagem = $"Editar Informações do(a) {animalAntigo._nome}";
             using (var telaEditar = new FormCadastro(mensagem, animalAntigo))
             {
                 telaEditar.ShowDialog();
+                animalNovo = telaEditar.Animal;
+
             }
+
+            //if (animalNovo == animalAntigo) MessageBox.Show("Continua as mesmas informações");
+
+            if (animalNovo != null)
+            {
+                for (int i = 0; i < lboDados.Items.Count; i++)
+                {
+                    
+                    if (lboDados.Items[i] == animalAntigo)
+                    {
+
+                        lboDados.Items[i] = animalNovo;
+                        
+                        break;
+                    }
+                }
+            }
+            
+            lboDados.Update();
+        }
+
+        private void btnSalvarComo_Click(object sender, EventArgs e)
+        {
+
+            // Se não tiver nada na lista, não continua
+            if (lboDados.Items.Count == 0) return;
+
+            // Filtra, sugere e entitula o dialogo
+            salvamento.Filter = "Arquivo TXT|*txt";
+            salvamento.FileName = "petlove";
+            salvamento.Title = "Salvar arquivo";
+            // Verifica se a pessoa selecionou o local de salvamento e o nome do arquivo 
+            if (salvamento.ShowDialog() != DialogResult.OK &&
+                salvamento.FileName == null) return;
+
+            // Abre o arquivo salvo na pasta
+            FileStream abrirArquivo = salvamento.OpenFile() as FileStream;
+            // Obtém o arquivo salvo
+            StreamWriter salvandoArquivo = new StreamWriter(abrirArquivo);
+
+            // ------------- TRECHO PARECIDO COM O DE SALVAR ----------------
+
+            // Cria o texto para salvamento
+            string texto = "";
+
+            // Adiciona os dados dentro do arquivo 
+            foreach (Animal animal in lboDados.Items)
+            {
+                texto += animal._nome + "\n";
+                texto += animal._animal + "\n";
+                texto += animal._raca + "\n";
+                texto += animal._idade.ToString() + "\n";
+
+            }
+
+            // Salva os dados dentro do arquivo
+            salvandoArquivo.WriteLine(texto);
+            // Fecha 
+            salvandoArquivo.Close();
 
         }
     }

@@ -35,6 +35,17 @@ namespace PetLove_Modificacao.Models
         }
 
 
+        #region Função Atualizar
+        public void Atualizar(string nome, string animal, string raca, int idade)
+        {
+            this._nome = nome;
+            this._animal = animal;
+            this._raca = raca;
+            this._idade = idade;
+        }
+        #endregion
+
+
         public override string ToString() => $"{_nome} - {_animal} - {_raca} - {_idade}";
 
 
