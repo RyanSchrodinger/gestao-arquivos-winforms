@@ -13,6 +13,7 @@ namespace PetLove_Modificacao.Models
     {
         #region Declaração dos atributos da classe "Animal"
 
+        // Apenas o set está privado, não sei qual seria a boa prática aqui então deixai com o _ mesmo 
         public string _nome { get; private set; }
         public string _animal { get; private set; }
         public string _raca { get; private set; }

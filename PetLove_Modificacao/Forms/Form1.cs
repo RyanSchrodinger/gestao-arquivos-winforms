@@ -1,4 +1,5 @@
-﻿using PetLove_Modificacao.Models;
+﻿using PetLove_Modificacao.Forms;
+using PetLove_Modificacao.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -111,11 +112,42 @@ namespace PetLove_Modificacao
             }
 
             lboDados.Items.Remove(animalSelecionado);
+            lboDados.Update();
 
         }
+
+
         #endregion
 
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            
+            string mensagem = "INSERIR NOVO ANIMAL";
+            using (FormCadastro telaCadastro = new FormCadastro(mensagem))
+            {
 
+
+                telaCadastro.ShowDialog();
+
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            
+            Animal animalAntigo = lboDados.SelectedItem as Animal;
+            if (animalAntigo == null) 
+            {
+                MessageBox.Show("Selecione algum campo.");
+                return;
+            }
+            string mensagem = $"Editar Informações do(a) {animalAntigo._nome}";
+            using (var telaEditar = new FormCadastro(mensagem, animalAntigo))
+            {
+                telaEditar.ShowDialog();
+            }
+
+        }
     }
 
 }
